@@ -12,7 +12,7 @@ export default function OrdersPage() {
                             .then(data => data);
 
     const {data, error, isLoading} = useSWR<OrderWithProducts []>(url, fetcher, {
-        refreshInterval: 3000
+        refreshInterval: 60000
     });
 
     if(isLoading) return 'Cargando...';
